@@ -1,6 +1,6 @@
 <!-- Banner / Logo -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ethereum/ethereum-org-website/dev/static/eth-diamond-black.png" alt="Ethereum Logo" width="100"/>
+  <img src="https://cdn.simpleicons.org/ethereum" alt="Ethereum Logo" width="100"/>
 </p>
 
 <h1 align="center">Storage Factory Project</h1>
@@ -108,17 +108,3 @@ forge script script/DeploySimpleStorage.s.sol:DeploySimpleStorage --rpc-url <you
 ```sh
 cast <subcommand>
 ```
-
-### 🆘 Help
-
-```sh
-forge --help
-anvil --help
-cast --help
-```
-
----
-
-<p align="center">
-  <sub>Inspired by the <a href="https://github.com/Cyfrin/foundry-full-course-cu">Cyfrin Foundry Full Course</a> 📚</sub>
-</p>
