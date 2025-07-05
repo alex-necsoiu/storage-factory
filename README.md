@@ -3,7 +3,7 @@
   <img src="https://cdn.simpleicons.org/ethereum" alt="Ethereum Logo" width="100"/>
 </p>
 
-<h1 align="center">Solidity Fundaments</h1>
+<h1 align="center">🚀 Ethereum Smart Contracts: From Fundamentals to Advanced — with Foundry & Solidity</h1>
 
 <p align="center">
   <b>Modular Solidity project for experimenting with contract deployment, inheritance, storage patterns, and crowdfunding using <a href="https://getfoundry.sh/">Foundry</a>.</b>
