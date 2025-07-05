@@ -3,10 +3,10 @@
   <img src="https://cdn.simpleicons.org/ethereum" alt="Ethereum Logo" width="100"/>
 </p>
 
-<h1 align="center">Storage Factory Project</h1>
+<h1 align="center">Solidity Fundaments</h1>
 
 <p align="center">
-  <b>Modular Solidity project for experimenting with contract deployment, inheritance, and storage patterns using <a href="https://getfoundry.sh/">Foundry</a>.</b>
+  <b>Modular Solidity project for experimenting with contract deployment, inheritance, storage patterns, and crowdfunding using <a href="https://getfoundry.sh/">Foundry</a>.</b>
 </p>
 
 <p align="center">
@@ -23,6 +23,8 @@ This repository demonstrates:
 - 📦 Basic and advanced storage contracts
 - 🧬 Inheritance and function overriding in Solidity
 - 🏭 Factory pattern for deploying and managing multiple contract instances
+- 💰 Crowdfunding contracts with price conversion
+- 🔗 Chainlink price feed integration
 
 ---
 
@@ -43,6 +45,19 @@ A factory contract for deploying and interacting with multiple `SimpleStorage` c
 - Deploys new `SimpleStorage` instances
 - Stores and retrieves values from any deployed instance by index
 
+### 💰 FundMe
+A crowdfunding contract that allows users to fund with ETH and withdraw funds (owner only).
+- Minimum funding amount of $5 USD (converted from ETH)
+- Chainlink price feed integration for real-time ETH/USD conversion
+- Owner-only withdrawal functionality
+- Automatic funding via receive() and fallback() functions
+
+### 🔗 PriceConverter
+A library for converting ETH amounts to USD using Chainlink price feeds.
+- Real-time price conversion from ETH to USD
+- Integration with Chainlink AggregatorV3Interface
+- Gas-efficient price calculations
+
 ---
 
 ## 🗂️ Directory Structure
@@ -53,6 +68,9 @@ src/
     AddFiveStorage.sol      # Inherits from SimpleStorage, overrides store()
     SimpleStorage.sol       # Basic storage contract
     StorageFactory.sol      # Factory for deploying/interacting with SimpleStorage
+  foundMe/
+    FundMe.sol             # Crowdfunding contract with price conversion
+    PriceConverter.sol     # Library for ETH/USD price conversion
 script/
   DeploySimpleStorage.s.sol # Example deployment script
 ```
@@ -62,6 +80,7 @@ script/
 ## 📖 Documentation
 
 - [Foundry Book](https://book.getfoundry.sh/)
+- [Chainlink Documentation](https://docs.chain.link/)
 
 ---
 
@@ -108,3 +127,18 @@ forge script script/DeploySimpleStorage.s.sol:DeploySimpleStorage --rpc-url <you
 ```sh
 cast <subcommand>
 ```
+
+
+### 🆘 Help
+
+```sh
+forge --help
+anvil --help
+cast --help
+```
+
+---
+
+<p align="center">
+  <sub>Inspired by the <a href="https://github.com/Cyfrin/foundry-full-course-cu">Cyfrin Foundry Full Course</a> 📚</sub>
+</p>
